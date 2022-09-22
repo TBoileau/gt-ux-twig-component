@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            {% set title = 'tutu' %}
+            <div class="col">
+                {% component alert with {type: 'success', message: 'mesdag'}%}
+                    {% block body %}
+                        <h1>{{ title }}</h1>
+                    {% endblock %}
+                {% endcomponent %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
